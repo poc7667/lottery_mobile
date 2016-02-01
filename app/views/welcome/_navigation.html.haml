@@ -1,0 +1,43 @@
+.navigation-background
+.navigation-wrapper
+  .navigation-content
+    .navigation-scroll
+      %a.navigation-logo{:href => "#"}
+      %a.navigation-hide{:href => "#"}
+        %i.fa.fa-times
+      .decoration
+      %ul.navigation
+        %li
+          %a.deploy-submenu{:href => "#"}
+            %i.fa.fa-list>
+            Developers 
+            %i.fa.fa-plus
+          %ul.submenu
+            - ["Primo Lin", "Poc Hsu"].each do |developer|
+              %li
+                %a{:href => "#"}
+                  %i.fa.fa-angle-right>
+                  = developer
+                  %i.fa.fa-circle
+        %li
+          %a.deploy-submenu{:href => "#"}
+            %i.fa.fa-envelope-o>
+            Bug Report        
+            %i.fa.fa-plus
+          %ul.submenu
+            %li
+              %a{:href => "mailto:poc.hsu@vivotek.com"}
+                %i.fa.fa-angle-right>
+                Poc Hsu
+                %i.fa.fa-circle
+
+      .navigation-socials
+        %a.facebook-color{:href => "https://www.facebook.com/VIVOTEK"}
+          %i.fa.fa-facebook
+        %a.google-color{:href => "https://play.google.com/store/apps/details?id=com.vivotek.viewer&hl=zh_TW"}
+          %i.fa.fa-google-plus
+        %a.twitter-color{:href => "https://twitter.com/vivotek"}
+          %i.fa.fa-twitter
+        .clear
+      %p.navigation-footer Copyright 2015. All rights reserved. 
+      %p.navigation-footer Powered by 品質管理處 設計驗證部

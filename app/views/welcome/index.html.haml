@@ -1,0 +1,16 @@
+#preloader
+  #status
+    %p.center-text
+      Loading the content...
+      %em Loading depends on your connection speed!
+      %em You can reload this page if it takes you too much time.
+.all-elements
+  = render 'navigation'
+  = render 'header'
+  .content    
+    .container.content-title
+    .container.no-bottom
+      %div#searchWinner
+        %h1.center 系統尚未開放查詢，將於尾牙晚會開始後開放.
+        %br
+  = render 'footer'

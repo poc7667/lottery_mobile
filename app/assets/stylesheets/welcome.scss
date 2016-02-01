@@ -1,0 +1,40 @@
+// Place all the styles related to the welcome controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+table{
+    td:nth-child(1) { width: 5%; max-width: 15px;}
+    td:nth-child(2) { width: 35%;max-width: 400px;}
+    td:nth-child(3) { width: 5%;
+        img{
+            display: inline;
+        }
+    }
+    td:nth-child(4) { width: 15%;}
+    td:nth-child(5) { width: 15%;}
+} 
+
+.center {
+    text-align: center;
+}
+
+
+
+input#s {
+    padding:14px;
+    border-style:solid;
+    border-width:1px;
+    border-color:#e3e3e3;
+    font-size:12px;
+    width:100%;
+    max-width:800px;
+    margin:0;
+    -webkit-appearance: none;
+    border-radius: 0;
+    color:#777;
+}
+
+#logo_text{
+    margin-top: 25px;
+    float: right;
+}
+
