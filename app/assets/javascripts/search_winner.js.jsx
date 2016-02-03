@@ -193,6 +193,6 @@ var App = React.createClass({
 $( document ).ready(function() {
     console.log( "ready!" );
     if(document.getElementById("searchWinner")){
-       // React.render(<App />, document.getElementById("searchWinner"));  
-    }    
+       React.render(<App />, document.getElementById("searchWinner"));  
+    }
 });
