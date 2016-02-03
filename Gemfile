@@ -79,7 +79,7 @@ group :development do
 end
 
 gem 'paperclip', '~> 4.1'
-gem 'curb'
+gem 'puma'
 gem 'nokogiri'
 gem 'mongoid', '~> 4.0.0'
 gem 'mongoid_search', '~> 0.2.8'

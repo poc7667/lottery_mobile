@@ -1,16 +1,15 @@
-application_path = '/var/www/vivotek-lottery-mobile-query-version'
-directory application_path
-workers Integer(ENV['WEB_CONCURRENCY'] || 48)
-threads_count = Integer(48)
-threads threads_count, threads_count
-
+APP_NAME = "vvtk_mobile"
+app_path = File.expand_path('../', File.dirname(__FILE__))
+pidfile "/tmp/puma.#{APP_NAME}.pid"
+bind "unix:///tmp/puma.#{APP_NAME}.sock"
+stdout_redirect "/tmp/puma.stdout.#{APP_NAME}.log", "/tmp/puma.stderr.#{APP_NAME}.log", true
+workers Integer(ENV['WEB_CONCURRENCY'] || 1)
+threads 1, 5
 preload_app!
 
 rackup      DefaultRackup
-port        ENV['PORT']     ||  8412
-environment ENV['RACK_ENV'] || 'development'
+port        ENV['PORT']     || 8591
+rails_env = ENV['RAILS_ENV'] || "production"
+environment rails_env
 
-stdout_redirect "#{application_path}/log/puma.stdout.log", "#{application_path}/log/puma.stderr.log"
-on_worker_boot do
-end
-
+activate_control_app
